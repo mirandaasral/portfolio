@@ -57,6 +57,10 @@ function App() {
           style={{
             paddingLeft: ".5em",
           }}
+          onClick={(e) => {
+            e.preventDefault();
+            setSelectedPiece(null);
+          }}
         >
           Miranda Asral
         </h1>
@@ -66,10 +70,10 @@ function App() {
       {selectedPiece && (
         <div
           className="piece-view"
-          style={{
-            display: "flex",
-          }}
         >
+          <div className="piece-image">
+            <img alt="" src={selectedPiece.fullImg} />
+          </div>
           <div className="piece-description">
             <h2>{selectedPiece.name}</h2>
             <p>{selectedPiece.description}</p>
@@ -83,9 +87,6 @@ function App() {
               &larr; Back
             </a>
           </div>
-          <div className="piece-image">
-            <img alt="" src={selectedPiece.fullImg} />
-          </div>
         </div>
       )}
       {/* list view of all pieces */}
@@ -97,7 +98,7 @@ function App() {
             // in the specific array
             pieces.map((piece, i) => {
               return (
-                <div className="col-6 m-0 list-item" key={"div_" + i}>
+                <div className="col-6 m-0 p-0 list-item" key={"div_" + i}>
                   {/* col-6 makes the div the size of half of the width of the row */}
                   {/* m-0 removes all the default margins of the col-6 (m-0 means no margins anywhere) */}
                   <img

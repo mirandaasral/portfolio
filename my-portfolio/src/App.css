@@ -13,6 +13,8 @@
   z-index: 5; /*higher level so header apears above*/
   background-color: antiquewhite;
   margin: 0;
+  height: 4em;
+  cursor: pointer;
 }
 
 .right-items {
@@ -41,19 +43,22 @@
 } */
 
 .piece-view {
-  display: flex;
   justify-content: center;
   margin-top: 4em;
 }
 
 .piece-description {
   background-color: #61dafb;
-  width: 33%;
+  width: 100%;
   padding-left: 1em;
+  height: calc((100vh - 4em) * .3);
 }
 
 .piece-image {
-  width: 67%;
+  height: calc((100vh - 4em) * .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .piece-image img{
@@ -67,7 +72,12 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .piece-view {
+  .list-item {
+    margin: 5px 0px !important;
+    min-width: 300px;
+  }
+
+  /* .piece-view {
     display: block !important;
     text-align: center;
   }
@@ -88,7 +98,7 @@
   .piece-image img{
     max-width: 80%;
     max-height: calc(100% - 8em);
-  }
+  } */
 }
 
 .App-logo {
