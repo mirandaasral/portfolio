@@ -62,15 +62,13 @@ function App() {
             setSelectedPiece(null);
           }}
         >
-          Miranda Asral
+          MIRANDA ASRAL
         </h1>
         <p className="right-items m-0">Resume</p>
       </div>
       {/* full view of one piece */}
       {selectedPiece && (
-        <div
-          className="piece-view"
-        >
+        <div className="piece-view">
           <div className="piece-image">
             <img alt="" src={selectedPiece.fullImg} />
           </div>

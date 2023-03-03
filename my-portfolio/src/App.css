@@ -1,17 +1,17 @@
 .App {
- font-family: 'Times New Roman', Times, serif !important; /* set font here */
+ font-family: 'Libre Franklin', sans-serif !important; /* set font here */
 }
 
 .name-header {
   display: flex;
   position: fixed;
   top: 0;
-  border-bottom: 1px solid;
-  border-color: black;
+  /**border-bottom: 1px solid;**/
+  /**border-color: black;**/
   align-items: center;
   width: 100%;
   z-index: 5; /*higher level so header apears above*/
-  background-color: antiquewhite;
+  /**background-color: antiquewhite;**/
   margin: 0;
   height: 4em;
   cursor: pointer;
