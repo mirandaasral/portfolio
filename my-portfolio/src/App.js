@@ -4,6 +4,12 @@ import "./App.css";
 
 import infographic from "./images/infographic.jpg";
 import play from "./images/play.jpg";
+import infographic_preview from "./images/infographic_preview.jpg";
+import package_design_preview from "./images/package_design_preview.jpg";
+import editorial_spread_2_preview from "./images/editorial_spread_2_preview.jpg";
+import Hierarchy_Text from "./images/Hierarchy_Text.jpg";
+import letter_as_form_demo_copy from "./images/letter_as_form_demo_copy.jpg";
+import miranda_asral_symbol_set1024_2 from "./images/miranda_asral_symbol_set1024_2.jpg";
 
 function App() {
   const [selectedPiece, setSelectedPiece] = useState(null);
@@ -13,37 +19,37 @@ function App() {
   const pieces = [
     {
       name: "Infographic",
-      listImg: infographic, //replace with cropped
+      listImg: infographic_preview, //replace with cropped
       fullImg: infographic,
       description: "Here is the infographic I made",
     },
     {
       name: "Tea Design",
-      listImg: play, //replace with cropped
+      listImg: package_design_preview, //replace with cropped
       fullImg: play,
       description: "Here is the tea design I made",
     },
     {
-      name: "Infographic",
-      listImg: infographic, //replace with cropped
+      name: "Editorial Spread",
+      listImg: editorial_spread_2_preview, //replace with cropped
       fullImg: infographic,
       description: "Here is the infographic I made",
     },
     {
-      name: "Tea Design",
-      listImg: play, //replace with cropped
+      name: "Hierarchy Exercise",
+      listImg: Hierarchy_Text, //replace with cropped
       fullImg: play,
       description: "Here is the tea design I made",
     },
     {
-      name: "Infographic",
-      listImg: infographic, //replace with cropped
+      name: "Letter as Form",
+      listImg: letter_as_form_demo_copy, //replace with cropped
       fullImg: infographic,
       description: "Here is the infographic I made",
     },
     {
-      name: "Tea Design",
-      listImg: play, //replace with cropped
+      name: "Symbol Set",
+      listImg: miranda_asral_symbol_set1024_2, //replace with cropped
       fullImg: play,
       description: "Here is the tea design I made",
     },
@@ -64,7 +70,10 @@ function App() {
         >
           MIRANDA ASRAL
         </h1>
-        <p className="right-items m-0">Resume</p>
+        <div className="right-items">
+          <p className="">Resume</p>
+          <p className="">About</p>
+        </div>
       </div>
       {/* full view of one piece */}
       {selectedPiece && (
@@ -96,7 +105,7 @@ function App() {
             // in the specific array
             pieces.map((piece, i) => {
               return (
-                <div className="col-6 m-0 p-0 list-item" key={"div_" + i}>
+                <div className="col-4 m-0 p-0 list-item" key={"div_" + i}>
                   {/* col-6 makes the div the size of half of the width of the row */}
                   {/* m-0 removes all the default margins of the col-6 (m-0 means no margins anywhere) */}
                   <img

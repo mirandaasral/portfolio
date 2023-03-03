@@ -1,5 +1,6 @@
 .App {
  font-family: 'Libre Franklin', sans-serif !important; /* set font here */
+ margin: 48px;
 }
 
 .name-header {
@@ -11,7 +12,7 @@
   align-items: center;
   width: 100%;
   z-index: 5; /*higher level so header apears above*/
-  /**background-color: antiquewhite;**/
+  background-color: white;
   margin: 0;
   height: 4em;
   cursor: pointer;
@@ -19,7 +20,19 @@
 
 .right-items {
   position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
   right: 1em;
+  margin-right: 96px;
+}
+
+.right-items p{
+  margin-left: 24px;
+  margin-bottom: 0px;
+}
+
+.right-items p:hover{
+  text-decoration: underline;
 }
 
 .portfolio-list {
@@ -36,6 +49,10 @@
 .list-image {
   margin: auto;
   width: 100%;
+}
+
+.list-image:hover {
+  opacity: .40;
 }
 
 /* .list-image:hover {
