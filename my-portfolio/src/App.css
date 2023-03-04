@@ -16,6 +16,7 @@
   margin: 0;
   height: 4em;
   cursor: pointer;
+  opacity: .9;
 }
 
 .right-items {
@@ -42,8 +43,9 @@
 }
 
 .list-item {
-  min-width: 400px;
-  margin: 5px;
+  min-width: 400px !important;
+  width: calc((100%) / 3 - 96px) !important;
+  margin-bottom: 48px;
 }
 
 .list-image {
@@ -90,8 +92,12 @@
 
 @media only screen and (max-width: 800px) {
   .list-item {
-    margin: 5px 0px !important;
-    min-width: 300px;
+    min-width: 300px !important;
+    width: 100% !important;
+  }
+
+  .web-pads {
+    display: none !important;
   }
 
   /* .piece-view {

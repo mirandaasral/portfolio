@@ -105,20 +105,25 @@ function App() {
             // in the specific array
             pieces.map((piece, i) => {
               return (
-                <div className="col-4 m-0 p-0 list-item" key={"div_" + i}>
-                  {/* col-6 makes the div the size of half of the width of the row */}
-                  {/* m-0 removes all the default margins of the col-6 (m-0 means no margins anywhere) */}
-                  <img
-                    src={piece.listImg}
-                    alt=""
-                    key={"img_" + i}
-                    className="list-image"
-                    onClick={(event) => {
-                      event.preventDefault();
-                      setSelectedPiece(piece);
-                    }}
-                  />
-                </div>
+                <>
+                  <div className={`list-item`} key={"div_" + i}>
+                    {/* col-6 makes the div the size of half of the width of the row */}
+                    {/* m-0 removes all the default margins of the col-6 (m-0 means no margins anywhere) */}
+                    <img
+                      src={piece.listImg}
+                      alt=""
+                      key={"img_" + i}
+                      className="list-image"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        setSelectedPiece(piece);
+                      }}
+                    />
+                  </div>
+                  {i !== 2 && i !== 5 && (
+                    <div className="web-pads" style={{ width: "48px" }}></div>
+                  )}
+                </>
               );
             })}
         </div>
