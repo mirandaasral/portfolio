@@ -60,9 +60,6 @@ function App() {
       <div className="name-header">
         <h1
           className="m-0"
-          style={{
-            paddingLeft: ".5em",
-          }}
           onClick={(e) => {
             e.preventDefault();
             setSelectedPiece(null);
@@ -119,6 +116,7 @@ function App() {
                         setSelectedPiece(piece);
                       }}
                     />
+                    <p className="list-hover">{piece.name.toUpperCase()}</p>
                   </div>
                   {i !== 2 && i !== 5 && (
                     <div className="web-pads" style={{ width: "48px" }}></div>
