@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
@@ -75,9 +76,6 @@ function App() {
       {/* full view of one piece */}
       {selectedPiece && (
         <div className="piece-view">
-          <div className="piece-image">
-            <img alt="" src={selectedPiece.fullImg} />
-          </div>
           <div className="piece-description">
             <h2>{selectedPiece.name}</h2>
             <p>{selectedPiece.description}</p>
@@ -90,6 +88,9 @@ function App() {
             >
               &larr; Back
             </a>
+          </div>
+          <div className="piece-image">
+            <img alt="" src={selectedPiece.fullImg} />
           </div>
         </div>
       )}
@@ -119,7 +120,7 @@ function App() {
                     <p className="list-hover">{piece.name.toUpperCase()}</p>
                   </div>
                   {i !== 2 && i !== 5 && (
-                    <div className="web-pads" style={{ width: "48px" }}></div>
+                    <div className="web-pads" key={'pad_'+i} style={{ width: "48px" }}></div>
                   )}
                 </>
               );
