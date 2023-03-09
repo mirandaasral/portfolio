@@ -11,7 +11,7 @@
   /**border-bottom: 1px solid;**/
   /**border-color: black;**/
   align-items: center;
-  width: 100%;
+  width: 100vw;
   z-index: 5; /*higher level so header apears above*/
   background-color: white;
   margin: 0;
@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: row-reverse;
   right: 0;
-  margin-right: 62px;
+  margin-right: 78px;
 }
 
 .right-items p{
@@ -128,6 +128,30 @@
   cursor: pointer;
 }
 
+.specialView {
+  margin: 4em 16px;
+  position: relative;
+}
+
+.resumeView {
+  width: 100%
+}
+
+.downloadButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  font-size: 1rem;
+  color: black;
+  border: 1px solid black;
+}
+
+.downloadButton:hover {
+  color: black;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 800px) {
   .portfolio-list {
     margin: 6em 0em 1em 0em !important;
@@ -195,6 +219,11 @@
   .piece-image img{
     max-width: 80%;
     max-height: calc(100% - 8em);
+  }
+
+  .specialView {
+    margin: 6em 0px;
+    position: relative;
   }
 }
 

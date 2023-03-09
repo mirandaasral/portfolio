@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+import resume from "./images/resume.jpg"
+
 import infographic from "./images/infographic.jpg";
 import play from "./images/play.jpg";
 import infographic_preview from "./images/infographic_preview.jpg";
@@ -14,8 +16,7 @@ import miranda_asral_symbol_set1024_2 from "./images/miranda_asral_symbol_set102
 
 function App() {
   const [selectedPiece, setSelectedPiece] = useState(null);
-
-  // i love you, i hope this was helpful and didn't make you really mad. muah <3
+  const [pageView, setPageView] = useState('pieces'); // pieces, about, resume
 
   const pieces = [
     {
@@ -64,17 +65,18 @@ function App() {
           onClick={(e) => {
             e.preventDefault();
             setSelectedPiece(null);
+            setPageView('pieces');
           }}
         >
           MIRANDA ASRAL
         </h1>
         <div className="right-items">
-          <p className="">Resume</p>
-          <p className="">About</p>
+          <p onClick={() => {setPageView('resume')}}>Resume</p>
+          <p onClick={() => {setPageView('about')}}>About</p>
         </div>
       </div>
       {/* full view of one piece */}
-      {selectedPiece && (
+      {selectedPiece && pageView === 'pieces' && (
         <div className="piece-view">
           <div className="piece-description">
             <h2>{selectedPiece.name}</h2>
@@ -83,6 +85,7 @@ function App() {
               onClick={(e) => {
                 e.preventDefault();
                 setSelectedPiece(null);
+                setPageView('pieces');
               }}
               className="piece-back-link"
             >
@@ -95,7 +98,7 @@ function App() {
         </div>
       )}
       {/* list view of all pieces */}
-      {!selectedPiece && (
+      {!selectedPiece && pageView === 'pieces' && (
         <div className="row portfolio-list">
           {/* row is a bootstrap class (it is just a row, good for mobile view stuff) */}
           {pieces.length &&
@@ -127,6 +130,26 @@ function App() {
             })}
         </div>
       )}
+      {pageView === 'about' &&
+        <div className="specialView">
+          <h2>About</h2>
+          <p> pretty cool gal</p>
+          <ul>
+            <li>
+                cool
+            </li>
+            <li>
+                very cool
+            </li>
+          </ul>
+        </div>
+      }
+      {pageView === 'resume' &&
+        <div className="specialView">
+          <img className="resumeView" src={resume} alt=""/>
+          <a className="downloadButton" href={'./resume.pdf'} download='Asral_Miranda.pdf'>Download</a>
+        </div>
+      }
     </div>
   );
 }
