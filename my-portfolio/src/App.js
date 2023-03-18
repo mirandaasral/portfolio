@@ -4,6 +4,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import resume from "./images/resume.jpg"
+import resume_mobile from "./images/resume_mobile.jpg"
 
 import infographic from "./images/infographic.jpg";
 import play from "./images/play.jpg";
@@ -178,7 +179,8 @@ function App() {
       }
       {pageView === 'resume' &&
         <div className="specialView">
-          <img className="resumeView" src={resume} alt=""/>
+          <img className="resumeView web-view" src={resume} alt=""/>
+          <img className="resumeView mobile-view" src={resume_mobile} alt=""/>
           <a className="downloadButton" href={'./resume.pdf'} download='Asral_Miranda.pdf'>Download</a>
         </div>
       }
