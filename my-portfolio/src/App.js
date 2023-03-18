@@ -7,8 +7,10 @@ import resume from "./images/resume.jpg"
 
 import infographic from "./images/infographic.jpg";
 import play from "./images/play.jpg";
+import play_full from "./images/play_full.jpg"
 import infographic_preview from "./images/infographic_preview.jpg";
 import package_design_preview from "./images/package_design_preview.jpg";
+import editorial_spread_2 from "./images/editorial_spread_2.jpg"
 import editorial_spread_2_preview from "./images/editorial_spread_2_preview.jpg";
 import Hierarchy_Text from "./images/Hierarchy_Text.jpg";
 import letter_as_form_demo_copy from "./images/letter_as_form_demo_copy.jpg";
@@ -23,39 +25,39 @@ function App() {
       name: "Infographic",
       listImg: infographic_preview, //replace with cropped
       fullImg: infographic,
-      description: "Here is the infographic I made",
+      description: "Infographic inspired by the question, 'what is truth?' Maps out the history of disinformation and mistrust of the media in the US.",
     },
     {
-      name: "Tea Design",
+      name: "Packaging Design",
       listImg: package_design_preview, //replace with cropped
-      fullImg: play,
-      description: "Here is the tea design I made",
+      fullImg: play_full,
+      description: "Two tea packaging design directions inspired by the Turkish evil eye. ",
     },
     {
       name: "Editorial Spread",
       listImg: editorial_spread_2_preview, //replace with cropped
-      fullImg: infographic,
-      description: "Here is the infographic I made",
+      fullImg: editorial_spread_2,
+      description: "Editorial spread inspired by architect and artist Zaha Hadid.",
     },
     {
       name: "Hierarchy Exercise",
       listImg: Hierarchy_Text, //replace with cropped
-      fullImg: play,
-      description: "Here is the tea design I made",
+      fullImg: Hierarchy_Text,
+      description: "Design exercise exploring hierarchy, using letters and text as form.",
     },
     {
       name: "Letter as Form",
       listImg: letter_as_form_demo_copy, //replace with cropped
-      fullImg: infographic,
-      description: "Here is the infographic I made",
+      fullImg: letter_as_form_demo_copy,
+      description: "Design exercise exploring letter as form using multiple typefaces.",
     },
     {
       name: "Symbol Set",
       listImg: miranda_asral_symbol_set1024_2, //replace with cropped
-      fullImg: play,
-      description: "Here is the tea design I made",
+      fullImg: miranda_asral_symbol_set1024_2,
+      description: "An ominous piece inspired by the novel Gone Girl by Gillian Flynn representing an unstable marriage riddled with manipulation, lies, deceit, and the weaponization of the couple's best skill: writing. This collection pictures a weading band, a weaponized pen, a burner phone, and a flipped over chair.",
     },
-  ];
+  ] ;
 
   return (
     <div className="App">
@@ -72,30 +74,59 @@ function App() {
         </h1>
         <div className="right-items">
           <p onClick={() => {setPageView('resume')}}>Resume</p>
-          <p onClick={() => {setPageView('about')}}>About</p>
+          {/* <p onClick={() => {setPageView('about')}}>About</p> */}
         </div>
       </div>
       {/* full view of one piece */}
       {selectedPiece && pageView === 'pieces' && (
-        <div className="piece-view">
-          <div className="piece-description">
-            <h2>{selectedPiece.name}</h2>
-            <p>{selectedPiece.description}</p>
-            <a
-              onClick={(e) => {
-                e.preventDefault();
-                setSelectedPiece(null);
-                setPageView('pieces');
-              }}
-              className="piece-back-link"
-            >
-              &larr; Back
-            </a>
-          </div>
-          <div className="piece-image">
-            <img alt="" src={selectedPiece.fullImg} />
-          </div>
-        </div>
+        <>
+            <div className="web-view">
+                <div className="piece-view-main">
+                <div className="piece-view">
+                    <div className="piece-description">
+                        <div className="piece-text">
+                            <h5>{selectedPiece.name.toUpperCase()}</h5>
+                            <p>{selectedPiece.description}</p>
+                            <a
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setSelectedPiece(null);
+                                setPageView('pieces');
+                            }}
+                            className="piece-back-link"
+                            >
+                            &larr; Back
+                            </a>
+                        </div>
+                    </div>
+                    <div className="piece-image">
+                        <img alt="" src={selectedPiece.fullImg} />
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div className="mobile-view">
+                <div className="piece-image">
+                    <img alt="" src={selectedPiece.fullImg} />
+                </div>
+                <div className="piece-description">
+                    <div className="piece-text">
+                        <h5>{selectedPiece.name.toUpperCase()}</h5>
+                        <p>{selectedPiece.description}</p>
+                        <a
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setSelectedPiece(null);
+                            setPageView('pieces');
+                        }}
+                        className="piece-back-link"
+                        >
+                        &larr; Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </>
       )}
       {/* list view of all pieces */}
       {!selectedPiece && pageView === 'pieces' && (
@@ -118,6 +149,7 @@ function App() {
                       onClick={(event) => {
                         event.preventDefault();
                         setSelectedPiece(piece);
+                        window.scrollTo(0, 0);
                       }}
                     />
                     <p className="list-hover">{piece.name.toUpperCase()}</p>
