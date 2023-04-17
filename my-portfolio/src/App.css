@@ -45,7 +45,6 @@
 .portfolio-list {
   margin: 4em 1em 0em 1em; /*top right bottom left*/
   align-items: center;
-  justify-content: center;
 }
 
 .list-item {

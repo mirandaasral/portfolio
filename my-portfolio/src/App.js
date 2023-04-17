@@ -16,12 +16,21 @@ import editorial_spread_2_preview from "./images/editorial_spread_2_preview.jpg"
 import Hierarchy_Text from "./images/Hierarchy_Text.jpg";
 import letter_as_form_demo_copy from "./images/letter_as_form_demo_copy.jpg";
 import miranda_asral_symbol_set1024_2 from "./images/miranda_asral_symbol_set1024_2.jpg";
+import voting from './images/voter-registration.png'
+import crop_spread from './images/brazda_crop.png'
+import spread from './images/brazda_full.jpg'
 
 function App() {
   const [selectedPiece, setSelectedPiece] = useState(null);
   const [pageView, setPageView] = useState('pieces'); // pieces, about, resume
 
   const pieces = [
+    {
+      name: "Editorial Spread",
+      listImg: crop_spread, //replace with cropped
+      fullImg: spread,
+      description: "Editorial spread inspired by artist Bozidar Brazda. This piece was part of a class-designed mockup of hte 2008 Whitney Biennial. My spread was combined with the work of about 15 other students to make up the content of the magazine.",
+    },
     {
       name: "Infographic",
       listImg: infographic_preview, //replace with cropped
@@ -57,6 +66,12 @@ function App() {
       listImg: miranda_asral_symbol_set1024_2, //replace with cropped
       fullImg: miranda_asral_symbol_set1024_2,
       description: "An ominous piece inspired by the novel Gone Girl by Gillian Flynn representing an unstable marriage riddled with manipulation, lies, deceit, and the weaponization of the couple's best skill: writing. This collection pictures a weading band, a weaponized pen, a burner phone, and a flipped over chair.",
+    },
+    {
+      name: "Lehigh Votes Website and Instagram",
+      listImg: voting, //replace with cropped
+      fullImg: voting,
+      description: "Social media efforts to help promote the Civic Engagment Day events at Lehigh University. Website: go.lehigh.edu/vote Instagram: https://instagram.com/lehighvotes",
     },
   ] ;
 
@@ -155,7 +170,7 @@ function App() {
                     />
                     <p className="list-hover">{piece.name.toUpperCase()}</p>
                   </div>
-                  {i !== 2 && i !== 5 && (
+                  {((i+1)%3 !== 0 && i !== pieces.length - 1) && (
                     <div className="web-pads" key={'pad_'+i} style={{ width: "48px" }}></div>
                   )}
                 </>
