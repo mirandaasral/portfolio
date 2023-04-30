@@ -29,13 +29,13 @@ function App() {
       name: "Editorial Spread",
       listImg: crop_spread, //replace with cropped
       fullImg: spread,
-      description: "Editorial spread inspired by artist Bozidar Brazda. This piece was part of a class-designed mockup of hte 2008 Whitney Biennial. My spread was combined with the work of about 15 other students to make up the content of the magazine.",
+      description: "Editorial spread inspired by artist Bozidar Brazda. This piece was part of a class-designed mockup of the 2008 Whitney Biennial. My spread was combined with the work of about 15 other students to make up the content of the magazine.",
     },
     {
       name: "Infographic",
       listImg: infographic_preview, //replace with cropped
       fullImg: infographic,
-      description: "Infographic inspired by the question, 'what is truth?' Maps out the history of disinformation and mistrust of the media in the US.",
+      description: "Infographic inspired by the question, 'What is truth?' Maps out the history of disinformation and mistrust of the media in the US.",
     },
     {
       name: "Packaging Design",
