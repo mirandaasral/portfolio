@@ -71,7 +71,7 @@ function App() {
       name: "Lehigh Votes Website and Instagram",
       listImg: voting, //replace with cropped
       fullImg: voting,
-      description: "Social media efforts to help promote the Civic Engagment Day events at Lehigh University. Website: go.lehigh.edu/vote Instagram: https://instagram.com/lehighvotes",
+      description: <>Social media efforts to help promote the Civic Engagment Day events at Lehigh University. <br/><br/><a src='go.lehigh.edu/vote' alt=''>go.lehigh.edu/vote</a> <br/><a src='https://instagram.com/lehighvotes' alt=''>https://instagram.com/lehighvotes</a></>,
     },
   ] ;
 
