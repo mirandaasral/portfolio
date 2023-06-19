@@ -20,11 +20,43 @@ import voting from './images/voter-registration.png'
 import crop_spread from './images/brazda_crop.png'
 import spread from './images/brazda_full.jpg'
 
+import crop_bbp from './images/asral_miranda_brand_guidelines_final/crop_logo.jpg'
+import bbp1 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-01.jpg'
+import bbp2 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-02.jpg'
+import bbp3 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-03.jpg'
+import bbp4 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-04.jpg'
+import bbp5 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-05.jpg'
+import bbp6 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-06.jpg'
+import bbp7 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-07.jpg'
+import bbp8 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-08.jpg'
+import bbp9 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-09.jpg'
+import bbp10 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-10.jpg'
+import bbp11 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-11.jpg'
+import bbp12 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-12.jpg'
+import bbp13 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-13.jpg'
+import bbp14 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-14.jpg'
+import bbp15 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-15.jpg'
+import bbp16 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-16.jpg'
+import bbp17 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-17.jpg'
+import bbp18 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-18.jpg'
+import bbp19 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-19.jpg'
+import bbp20 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-20.jpg'
+import bbp21 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-21.jpg'
+import bbp22 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-22.jpg'
+import bbp23 from './images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-23.jpg'
+
+
 function App() {
   const [selectedPiece, setSelectedPiece] = useState(null);
   const [pageView, setPageView] = useState('pieces'); // pieces, about, resume
 
   const pieces = [
+    {
+      name: "Bethlehem Branding",
+      listImg: crop_bbp, //replace with cropped
+      fullImg: [bbp1, bbp2, bbp3, bbp4, bbp5, bbp6, bbp7, bbp8, bbp9, bbp10, bbp11, bbp12, bbp13, bbp14, bbp15, bbp16, bbp17, bbp18, bbp19, bbp20, bbp21, bbp22, bbp23],
+      description: null,
+    },
     {
       name: "Editorial Spread",
       listImg: crop_spread, //replace with cropped
@@ -71,7 +103,7 @@ function App() {
       name: "Lehigh Votes Website and Instagram",
       listImg: voting, //replace with cropped
       fullImg: voting,
-      description: <>Social media efforts to help promote the Civic Engagment Day events at Lehigh University. <br/><br/><a src='go.lehigh.edu/vote' alt=''>go.lehigh.edu/vote</a> <br/><a src='https://instagram.com/lehighvotes' alt=''>https://instagram.com/lehighvotes</a></>,
+      description: <>Social media efforts to help promote the Civic Engagment Day events at Lehigh University. <br/><br/><a href='https://go.lehigh.edu/vote' alt=''>go.lehigh.edu/vote</a> <br/><a href='https://instagram.com/lehighvotes' alt=''>instagram.com/lehighvotes</a></>,
     },
   ] ;
 
@@ -94,7 +126,25 @@ function App() {
         </div>
       </div>
       {/* full view of one piece */}
-      {selectedPiece && pageView === 'pieces' && (
+      {selectedPiece && pageView === 'pieces' && selectedPiece.name === 'Bethlehem Branding' && (
+      <>
+        <div className="web-view">
+            <div className="piece-view-main">
+                {selectedPiece.fullImg.map((slide, i) => {
+                  return (
+                    <img
+                      src={slide}
+                      className='slide-image'
+                      alt=''
+                      key={i}
+                    />
+                  )
+                })}
+            </div>
+        </div>
+      </>
+      )}
+      {selectedPiece && pageView === 'pieces' && selectedPiece.name !== 'Bethlehem Branding' && (
         <>
             <div className="web-view">
                 <div className="piece-view-main">
