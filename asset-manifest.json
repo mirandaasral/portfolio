@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.0f95c829.css",
-    "main.js": "/portfolio/static/js/main.b0281635.js",
+    "main.js": "/portfolio/static/js/main.4bdb975e.js",
     "static/js/787.128fc6e9.chunk.js": "/portfolio/static/js/787.128fc6e9.chunk.js",
-    "static/media/brazda_full.jpg": "/portfolio/static/media/brazda_full.9e146e893c86671e2e5b.jpg",
-    "static/media/brazda_crop.png": "/portfolio/static/media/brazda_crop.ab84aef3502b32ae8560.png",
     "static/media/voter-registration.png": "/portfolio/static/media/voter-registration.9ed4193e1e3c0aa7f96f.png",
+    "static/media/brazda_crop.png": "/portfolio/static/media/brazda_crop.69467556ef75140c1869.png",
     "static/media/resume.jpg": "/portfolio/static/media/resume.3ac6c55a6ada6dec5dc2.jpg",
+    "static/media/brazda_full.png": "/portfolio/static/media/brazda_full.74850b8895f2a339441e.png",
     "static/media/resume_mobile.jpg": "/portfolio/static/media/resume_mobile.cdf9f881c1b8120ae6c0.jpg",
     "static/media/asral_miranda_brand_guidelines_final-16.jpg": "/portfolio/static/media/asral_miranda_brand_guidelines_final-16.2d445231137211ad2519.jpg",
     "static/media/infographic.jpg": "/portfolio/static/media/infographic.54ab81131adea893215b.jpg",
@@ -45,11 +45,11 @@
     "static/media/logo.svg": "/portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/portfolio/index.html",
     "main.0f95c829.css.map": "/portfolio/static/css/main.0f95c829.css.map",
-    "main.b0281635.js.map": "/portfolio/static/js/main.b0281635.js.map",
+    "main.4bdb975e.js.map": "/portfolio/static/js/main.4bdb975e.js.map",
     "787.128fc6e9.chunk.js.map": "/portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f95c829.css",
-    "static/js/main.b0281635.js"
+    "static/js/main.4bdb975e.js"
   ]
 }
