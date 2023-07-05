@@ -296,7 +296,7 @@ function App() {
           <img className="resumeView mobile-view" src={resume_mobile} alt="" />
           <a
             className="downloadButton"
-            href={"./resume.pdf"}
+            href={"./Asral_Miranda_Resume_Portfolio.pdf"}
             download="Asral_Miranda_Resume_Portfolio.pdf"
           >
             Download
