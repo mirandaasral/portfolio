@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import resume from "./images/resume.jpg";
-import resume_mobile from "./images/resume_mobile.jpg";
+import resume from "./images/Asral_Miranda_Resume.jpg";
+import resume_mobile from "./images/Asral_Miranda_Resume_Mobile.jpg";
 
 import infographic from "./images/infographic.jpg";
 import play from "./images/play.jpg";
@@ -297,7 +297,7 @@ function App() {
           <a
             className="downloadButton"
             href={"./resume.pdf"}
-            download="Asral_Miranda.pdf"
+            download="Asral_Miranda_Resume_Portfolio.pdf"
           >
             Download
           </a>
