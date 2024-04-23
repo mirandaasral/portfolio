@@ -137,6 +137,12 @@
   position: relative;
 }
 
+.piece-text-list {
+  text-align: left !important;
+  width: 100%;
+  padding-left: 1em;
+}
+
 .piece-text {
   text-align: right;
   padding-right: 1em;
@@ -156,6 +162,7 @@
 .piece-text p {
   font-size: 14px;
   line-height: 18px;
+  white-space: pre-line;
 }
 
 .piece-image {
