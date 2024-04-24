@@ -12,7 +12,8 @@ This will update the `Pieces.js` file which should look like `PiecesTest.js`
 
 run `npm start` from the `/my-portfolio` folder to make sure everything looks as intended.
 
-once everything is set, run the deployment step
+once everything is set, run the deployment step from `/my-portfolio`
+
 ```
 npm run deploy
 ```
