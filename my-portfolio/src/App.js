@@ -10,49 +10,13 @@ import IndividualPiece from "./components/IndividualPiece";
 import resume from "./images/Asral_Miranda_Resume.jpg";
 import resume_mobile from "./images/Asral_Miranda_Resume_Mobile.jpg";
 
-import infographic from "./images/infographic.jpg";
-import play from "./images/play.jpg";
-import play_full from "./images/play_full.jpg";
-import infographic_preview from "./images/infographic_preview.jpg";
-import package_design_preview from "./images/package_design_preview.jpg";
-import editorial_spread_2 from "./images/editorial_spread_2.jpg";
-import editorial_spread_2_preview from "./images/editorial_spread_2_preview.jpg";
-import Hierarchy_Text from "./images/Hierarchy_Text.jpg";
-import letter_as_form_demo_copy from "./images/letter_as_form_demo_copy.jpg";
-import miranda_asral_symbol_set1024_2 from "./images/miranda_asral_symbol_set1024_2.jpg";
-import voting from "./images/voter-registration.png";
-import crop_spread from "./images/brazda_crop.png";
-import spread from "./images/brazda_full.png";
-
-import crop_bbp from "./images/asral_miranda_brand_guidelines_final/crop_logo.jpg";
-import bbp1 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-01.jpg";
-import bbp2 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-02.jpg";
-import bbp3 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-03.jpg";
-import bbp4 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-04.jpg";
-import bbp5 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-05.jpg";
-import bbp6 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-06.jpg";
-import bbp7 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-07.jpg";
-import bbp8 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-08.jpg";
-import bbp9 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-09.jpg";
-import bbp10 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-10.jpg";
-import bbp11 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-11.jpg";
-import bbp12 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-12.jpg";
-import bbp13 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-13.jpg";
-import bbp14 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-14.jpg";
-import bbp15 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-15.jpg";
-import bbp16 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-16.jpg";
-import bbp17 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-17.jpg";
-import bbp18 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-18.jpg";
-import bbp19 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-19.jpg";
-import bbp20 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-20.jpg";
-import bbp21 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-21.jpg";
-import bbp22 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-22.jpg";
-import bbp23 from "./images/asral_miranda_brand_guidelines_final/asral_miranda_brand_guidelines_final-23.jpg";
+import { pieces } from './Pieces.js'
 
 function App() {
   const [selectedPiece, setSelectedPiece] = useState(null);
   const [pageView, setPageView] = useState("pieces"); // pieces, about, resume
 
+<<<<<<< HEAD
   let { id } = useParams();
 
   const pieces = [
@@ -155,6 +119,30 @@ function App() {
       ),
     },
   ];
+=======
+  function process_descriptions(text) {
+    const REGEX = /(([a-z]+:\/\/)?(([a-z0-9\-]+\.)+([a-z]{2}|aero|arpa|biz|com|coop|edu|gov|info|int|jobs|mil|museum|name|nato|net|org|pro|travel|local|internal))(:[0-9]{1,5})?(\/[a-z0-9_\-\.~]+)*(\/([a-z0-9_\-\.]*)(\?[a-z0-9+_\-\.%=&amp;]*)?)?(#[a-zA-Z0-9!$&'()*+.=-_~:@/?]*)?)(\s+|$)/gi
+    const IDENT = "*******"
+    const intermediateText = text.replace(REGEX, (url) => {
+      const cleanURL = url.replace('\n', '')
+      return '|||' + IDENT + cleanURL + '|||' + url.replace(cleanURL, '')
+    })
+    return intermediateText.split('|||').map((value, index) => {
+      if (value.includes(IDENT)) {
+        const url = value.replace(IDENT, '')
+        return <a
+          key={url}
+          href={url}
+          target={'_blank'}
+          rel='noopener noreferrer'
+        >
+          {url}
+        </a>
+      }
+      return value
+    })
+  }
+>>>>>>> 6fa02834bc0b95b136d56d832ea780e34477ca98
 
   useEffect(() => {
     switch (id) {
@@ -208,7 +196,7 @@ function App() {
         )}
       {selectedPiece &&
         pageView === "pieces" &&
-        selectedPiece.name !== "Bethlehem Branding" && (
+        !Array.isArray(selectedPiece.fullImg) && (
           <>
             <IndividualPiece selectedPiece={selectedPiece} />
           </>
