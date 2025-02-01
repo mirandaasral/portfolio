@@ -1,7 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link, Navigate, useParams } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
+
+import LargePiece from "./components/LargePiece";
+import IndividualPiece from "./components/IndividualPiece";
 
 import resume from "./images/Asral_Miranda_Resume.jpg";
 import resume_mobile from "./images/Asral_Miranda_Resume_Mobile.jpg";
@@ -49,6 +53,8 @@ function App() {
   const [selectedPiece, setSelectedPiece] = useState(null);
   const [pageView, setPageView] = useState("pieces"); // pieces, about, resume
 
+  let { id } = useParams();
+
   const pieces = [
     {
       name: "Bethlehem Branding",
@@ -83,7 +89,7 @@ function App() {
     {
       name: "Editorial Spread",
       listImg: crop_spread, //replace with cropped
-      fullImg: spread,
+      fullImg: [spread, spread],
       description:
         "Editorial spread inspired by artist Bozidar Brazda. This piece was part of a class-designed mockup of the 2008 Whitney Biennial. My spread was combined with the work of about 15 other students to make up the content of the magazine.",
     },
@@ -150,26 +156,44 @@ function App() {
     },
   ];
 
+  useEffect(() => {
+    switch (id) {
+      case "resume":
+        setPageView("resume");
+        setSelectedPiece(null);
+        break;
+      case null:
+        setSelectedPiece(null);
+      default:
+        setPageView("pieces");
+        try {
+          if (pieces?.[parseInt(id)]) {
+            setSelectedPiece(pieces?.[parseInt(id)]);
+          } else {
+            setSelectedPiece(undefined);
+          }
+        } catch (err) {
+          setSelectedPiece(undefined);
+        }
+    }
+  }, [id]);
+
+  if (id && selectedPiece === undefined) {
+    return <Navigate to="/" />;
+  }
   return (
     <div className="App">
       <div className="name-header">
-        <h1
-          className="m-0"
-          onClick={(e) => {
-            e.preventDefault();
-            setSelectedPiece(null);
-            setPageView("pieces");
-          }}
-        >
-          MIRANDA ASRAL
-        </h1>
+        <Link to={{ pathname: `/` }}>
+          <h1 className="m-0">MIRANDA ASRAL</h1>
+        </Link>
         <div className="right-items">
           <p
             onClick={() => {
               setPageView("resume");
             }}
           >
-            Resume
+            <Link to={{ pathname: `/project/resume` }}>Resume</Link>
           </p>
           {/* <p onClick={() => {setPageView('about')}}>About</p> */}
         </div>
@@ -179,67 +203,14 @@ function App() {
         pageView === "pieces" &&
         selectedPiece.name === "Bethlehem Branding" && (
           <>
-            <div className="web-view" style={{ display: "block" }}>
-              <div className="piece-view-main">
-                {selectedPiece.fullImg.map((slide, i) => {
-                  return (
-                    <img src={slide} className="slide-image" alt="" key={i} />
-                  );
-                })}
-              </div>
-            </div>
+            <LargePiece selectedPiece={selectedPiece} />
           </>
         )}
       {selectedPiece &&
         pageView === "pieces" &&
         selectedPiece.name !== "Bethlehem Branding" && (
           <>
-            <div className="web-view">
-              <div className="piece-view-main">
-                <div className="piece-view">
-                  <div className="piece-description">
-                    <div className="piece-text">
-                      <h5>{selectedPiece.name.toUpperCase()}</h5>
-                      <p>{selectedPiece.description}</p>
-                      <a
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setSelectedPiece(null);
-                          setPageView("pieces");
-                        }}
-                        className="piece-back-link"
-                      >
-                        &larr; Back
-                      </a>
-                    </div>
-                  </div>
-                  <div className="piece-image">
-                    <img alt="" src={selectedPiece.fullImg} />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mobile-view">
-              <div className="piece-image">
-                <img alt="" src={selectedPiece.fullImg} />
-              </div>
-              <div className="piece-description">
-                <div className="piece-text">
-                  <h5>{selectedPiece.name.toUpperCase()}</h5>
-                  <p>{selectedPiece.description}</p>
-                  <a
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setSelectedPiece(null);
-                      setPageView("pieces");
-                    }}
-                    className="piece-back-link"
-                  >
-                    &larr; Back
-                  </a>
-                </div>
-              </div>
-            </div>
+            <IndividualPiece selectedPiece={selectedPiece} />
           </>
         )}
       {/* list view of all pieces */}
@@ -255,17 +226,14 @@ function App() {
                   <div className={`list-item`} key={"div_" + i}>
                     {/* col-6 makes the div the size of half of the width of the row */}
                     {/* m-0 removes all the default margins of the col-6 (m-0 means no margins anywhere) */}
-                    <img
-                      src={piece.listImg}
-                      alt=""
-                      key={"img_" + i}
-                      className="list-image"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        setSelectedPiece(piece);
-                        window.scrollTo(0, 0);
-                      }}
-                    />
+                    <Link to={{ pathname: `/project/${i}` }}>
+                      <img
+                        src={piece.listImg}
+                        alt=""
+                        key={"img_" + i}
+                        className="list-image"
+                      />
+                    </Link>
                     <p className="list-hover">{piece.name.toUpperCase()}</p>
                   </div>
                   {(i + 1) % 3 !== 0 && i !== pieces.length - 1 && (
