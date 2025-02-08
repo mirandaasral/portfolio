@@ -10,139 +10,34 @@ import IndividualPiece from "./components/IndividualPiece";
 import resume from "./images/Asral_Miranda_Resume.jpg";
 import resume_mobile from "./images/Asral_Miranda_Resume_Mobile.jpg";
 
-import { pieces } from './Pieces.js'
+import { pieces } from "./Pieces.js";
 
 function App() {
   const [selectedPiece, setSelectedPiece] = useState(null);
   const [pageView, setPageView] = useState("pieces"); // pieces, about, resume
 
-<<<<<<< HEAD
   let { id } = useParams();
 
-  const pieces = [
-    {
-      name: "Bethlehem Branding",
-      listImg: crop_bbp, //replace with cropped
-      fullImg: [
-        bbp1,
-        bbp2,
-        bbp3,
-        bbp4,
-        bbp5,
-        bbp6,
-        bbp7,
-        bbp8,
-        bbp9,
-        bbp10,
-        bbp11,
-        bbp12,
-        bbp13,
-        bbp14,
-        bbp15,
-        bbp16,
-        bbp17,
-        bbp18,
-        bbp19,
-        bbp20,
-        bbp21,
-        bbp22,
-        bbp23,
-      ],
-      description: null,
-    },
-    {
-      name: "Editorial Spread",
-      listImg: crop_spread, //replace with cropped
-      fullImg: [spread, spread],
-      description:
-        "Editorial spread inspired by artist Bozidar Brazda. This piece was part of a class-designed mockup of the 2008 Whitney Biennial. My spread was combined with the work of about 15 other students to make up the content of the magazine.",
-    },
-    {
-      name: "Infographic",
-      listImg: infographic_preview, //replace with cropped
-      fullImg: infographic,
-      description:
-        "Infographic inspired by the question, 'What is truth?' Maps out the history of disinformation and mistrust of the media in the US.",
-    },
-    {
-      name: "Packaging Design",
-      listImg: package_design_preview, //replace with cropped
-      fullImg: play_full,
-      description:
-        "Two tea packaging design directions inspired by the Turkish evil eye. ",
-    },
-    {
-      name: "Editorial Spread",
-      listImg: editorial_spread_2_preview, //replace with cropped
-      fullImg: editorial_spread_2,
-      description:
-        "Editorial spread inspired by architect and artist Zaha Hadid.",
-    },
-    {
-      name: "Hierarchy Exercise",
-      listImg: Hierarchy_Text, //replace with cropped
-      fullImg: Hierarchy_Text,
-      description:
-        "Design exercise exploring hierarchy, using letters and text as form.",
-    },
-    {
-      name: "Letter as Form",
-      listImg: letter_as_form_demo_copy, //replace with cropped
-      fullImg: letter_as_form_demo_copy,
-      description:
-        "Design exercise exploring letter as form using multiple typefaces.",
-    },
-    {
-      name: "Symbol Set",
-      listImg: miranda_asral_symbol_set1024_2, //replace with cropped
-      fullImg: miranda_asral_symbol_set1024_2,
-      description:
-        "An ominous piece inspired by the novel Gone Girl by Gillian Flynn representing an unstable marriage riddled with manipulation, lies, deceit, and the weaponization of the couple's best skill: writing. This collection pictures a weading band, a weaponized pen, a burner phone, and a flipped over chair.",
-    },
-    {
-      name: "Lehigh Votes Website and Instagram",
-      listImg: voting, //replace with cropped
-      fullImg: voting,
-      description: (
-        <>
-          Social media efforts to help promote the Civic Engagment Day events at
-          Lehigh University. <br />
-          <br />
-          <a href="https://go.lehigh.edu/vote" alt="">
-            go.lehigh.edu/vote
-          </a>{" "}
-          <br />
-          <a href="https://instagram.com/lehighvotes" alt="">
-            instagram.com/lehighvotes
-          </a>
-        </>
-      ),
-    },
-  ];
-=======
   function process_descriptions(text) {
-    const REGEX = /(([a-z]+:\/\/)?(([a-z0-9\-]+\.)+([a-z]{2}|aero|arpa|biz|com|coop|edu|gov|info|int|jobs|mil|museum|name|nato|net|org|pro|travel|local|internal))(:[0-9]{1,5})?(\/[a-z0-9_\-\.~]+)*(\/([a-z0-9_\-\.]*)(\?[a-z0-9+_\-\.%=&amp;]*)?)?(#[a-zA-Z0-9!$&'()*+.=-_~:@/?]*)?)(\s+|$)/gi
-    const IDENT = "*******"
+    const REGEX =
+      /(([a-z]+:\/\/)?(([a-z0-9\-]+\.)+([a-z]{2}|aero|arpa|biz|com|coop|edu|gov|info|int|jobs|mil|museum|name|nato|net|org|pro|travel|local|internal))(:[0-9]{1,5})?(\/[a-z0-9_\-\.~]+)*(\/([a-z0-9_\-\.]*)(\?[a-z0-9+_\-\.%=&amp;]*)?)?(#[a-zA-Z0-9!$&'()*+.=-_~:@/?]*)?)(\s+|$)/gi;
+    const IDENT = "*******";
     const intermediateText = text.replace(REGEX, (url) => {
-      const cleanURL = url.replace('\n', '')
-      return '|||' + IDENT + cleanURL + '|||' + url.replace(cleanURL, '')
-    })
-    return intermediateText.split('|||').map((value, index) => {
+      const cleanURL = url.replace("\n", "");
+      return "|||" + IDENT + cleanURL + "|||" + url.replace(cleanURL, "");
+    });
+    return intermediateText.split("|||").map((value, index) => {
       if (value.includes(IDENT)) {
-        const url = value.replace(IDENT, '')
-        return <a
-          key={url}
-          href={url}
-          target={'_blank'}
-          rel='noopener noreferrer'
-        >
-          {url}
-        </a>
+        const url = value.replace(IDENT, "");
+        return (
+          <a key={url} href={url} target={"_blank"} rel="noopener noreferrer">
+            {url}
+          </a>
+        );
       }
-      return value
-    })
+      return value;
+    });
   }
->>>>>>> 6fa02834bc0b95b136d56d832ea780e34477ca98
 
   useEffect(() => {
     switch (id) {
