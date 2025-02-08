@@ -57,6 +57,24 @@ import s1F2 from "./images/Studio1Final/FINAL BOARD FOR PRINT COMPLETE FINAL-2.p
 import s1F3 from "./images/Studio1Final/FINAL BOARD FOR PRINT COMPLETE FINAL-3.png";
 import s1F4 from "./images/Studio1Final/FINAL BOARD FOR PRINT COMPLETE FINAL-4.png";
 import s1Fcrop from "./images/Studio1Final/crop_final.png";
+import addFull from "./images/Addition/ASRAL_PICCIRILLI_BOARD_FINAL.png";
+import addCrop from "./images/Addition/crop_addition.png";
+import modelCrop from "./images/semester1Models/crop_models.png";
+import s1MHL1 from "./images/semester1Models/Heavy Light Images-1.png";
+import s1MHL2 from "./images/semester1Models/Heavy Light Images-2.png";
+import s1MHL3 from "./images/semester1Models/Heavy Light Images-3.png";
+import s1MHL4 from "./images/semester1Models/Heavy Light Images-4.png";
+import s1MA2_1 from "./images/semester1Models/Asral Miranda Assignment 2a-1.png";
+import s1MA2_2 from "./images/semester1Models/Asral Miranda Assignment 2a-2.png";
+import s1MA2_3 from "./images/semester1Models/Asral Miranda Assignment 2a-3.png";
+import s1MA2_4 from "./images/semester1Models/Asral Miranda Assignment 2a-4.png";
+import s1MA2_5 from "./images/semester1Models/Asral Miranda Assignment 2a-5.png";
+import s1MA2_6 from "./images/semester1Models/Asral Miranda Assignment 2a-6.png";
+import s1MA2_7 from "./images/semester1Models/Asral Miranda Assignment 2a-7.png";
+import s1MVH1 from "./images/semester1Models/VerticalHorizontalDrawings-1.png";
+import s1MVH2 from "./images/semester1Models/VerticalHorizontalDrawings-2.png";
+import s1MVH3 from "./images/semester1Models/VerticalHorizontalDrawings-3.png";
+import s1MVH4 from "./images/semester1Models/VerticalHorizontalDrawings-4.png";
 
 export const pieces = [
   {
@@ -66,6 +84,38 @@ export const pieces = [
     fullImg: [s1F1, s1F2, s1F3, s1F4],
     isDocument: true,
     isBig: true,
+  },
+  {
+    name: "Residential Design Analysis and Addition",
+    description: "",
+    listImg: addCrop,
+    fullImg: [addFull],
+    isDocument: true,
+    isBig: true,
+  },
+  {
+    name: "Abstract Modeling",
+    description: "",
+    listImg: modelCrop,
+    fullImg: [
+      s1MHL1,
+      s1MHL2,
+      s1MHL3,
+      s1MHL4,
+      s1MA2_1,
+      s1MA2_2,
+      s1MA2_3,
+      s1MA2_4,
+      s1MA2_5,
+      s1MA2_6,
+      s1MA2_7,
+      s1MVH1,
+      s1MVH2,
+      s1MVH3,
+      s1MVH4,
+    ],
+    isDocument: true,
+    isBig: false,
   },
   {
     name: "Bethlehem Branding",
