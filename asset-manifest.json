@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.ff396af1.css",
-    "main.js": "/portfolio/static/js/main.3c9752fc.js",
+    "main.js": "/portfolio/static/js/main.dd7fc1bc.js",
     "static/js/787.128fc6e9.chunk.js": "/portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/ASRAL_PICCIRILLI_BOARD_FINAL.png": "/portfolio/static/media/ASRAL_PICCIRILLI_BOARD_FINAL.2504509f5ea24aa34dac.png",
     "static/media/FINAL BOARD FOR PRINT COMPLETE FINAL-1.png": "/portfolio/static/media/FINAL BOARD FOR PRINT COMPLETE FINAL-1.46223fcb7ee0bbe65940.png",
     "static/media/FINAL BOARD FOR PRINT COMPLETE FINAL-4.png": "/portfolio/static/media/FINAL BOARD FOR PRINT COMPLETE FINAL-4.f9823adfbee95c0a617f.png",
     "static/media/zaha_hadid_mockup.png": "/portfolio/static/media/zaha_hadid_mockup.4fd574e18d7ed2c55101.png",
@@ -13,9 +14,26 @@
     "static/media/polling-locations.png": "/portfolio/static/media/polling-locations.629e8b5126770f0b5cff.png",
     "static/media/brazda_crop.png": "/portfolio/static/media/brazda_crop.69467556ef75140c1869.png",
     "static/media/nuray_apricot_mockup.png": "/portfolio/static/media/nuray_apricot_mockup.17ce89447708777bdbad.png",
+    "static/media/VerticalHorizontalDrawings-1.png": "/portfolio/static/media/VerticalHorizontalDrawings-1.6840665fafa20c73adba.png",
+    "static/media/crop_models.png": "/portfolio/static/media/crop_models.c06f4fc182e5c25d1c3c.png",
+    "static/media/VerticalHorizontalDrawings-3.png": "/portfolio/static/media/VerticalHorizontalDrawings-3.0554c90b8b4b7cb13f37.png",
     "static/media/FINAL BOARD FOR PRINT COMPLETE FINAL-3.png": "/portfolio/static/media/FINAL BOARD FOR PRINT COMPLETE FINAL-3.2919ab7fb860a7490a46.png",
+    "static/media/crop_addition.png": "/portfolio/static/media/crop_addition.b71bf3d0f4b54df556c0.png",
+    "static/media/Asral Miranda Assignment 2a-1.png": "/portfolio/static/media/Asral Miranda Assignment 2a-1.0af2de3ce82c386c9aef.png",
+    "static/media/Heavy Light Images-3.png": "/portfolio/static/media/Heavy Light Images-3.744c9d35eab1347d55e8.png",
+    "static/media/Asral Miranda Assignment 2a-5.png": "/portfolio/static/media/Asral Miranda Assignment 2a-5.0e98dca119b8a7c5d4c8.png",
+    "static/media/Asral Miranda Assignment 2a-3.png": "/portfolio/static/media/Asral Miranda Assignment 2a-3.a9b02f1c9c52067a4e80.png",
+    "static/media/Heavy Light Images-2.png": "/portfolio/static/media/Heavy Light Images-2.17ed73b1bf73f9c820f5.png",
+    "static/media/VerticalHorizontalDrawings-2.png": "/portfolio/static/media/VerticalHorizontalDrawings-2.6dadf905dcdc8d6398db.png",
+    "static/media/Heavy Light Images-4.png": "/portfolio/static/media/Heavy Light Images-4.8faae8266e944abf1f39.png",
+    "static/media/Asral Miranda Assignment 2a-6.png": "/portfolio/static/media/Asral Miranda Assignment 2a-6.4887261918384a24b08b.png",
+    "static/media/Heavy Light Images-1.png": "/portfolio/static/media/Heavy Light Images-1.f0eb1abcc1beb6657848.png",
+    "static/media/Asral Miranda Assignment 2a-4.png": "/portfolio/static/media/Asral Miranda Assignment 2a-4.a2962343106634ea0862.png",
+    "static/media/Asral Miranda Assignment 2a-2.png": "/portfolio/static/media/Asral Miranda Assignment 2a-2.0e3053d92c1fb3cfdbc9.png",
+    "static/media/Asral Miranda Assignment 2a-7.png": "/portfolio/static/media/Asral Miranda Assignment 2a-7.b1b72e7ba6cb48dd1afc.png",
     "static/media/Lehigh_Car.png": "/portfolio/static/media/Lehigh_Car.2c79991e2dd29520fe9a.png",
     "static/media/brazda_full.png": "/portfolio/static/media/brazda_full.15224ae274e7a8dbd484.png",
+    "static/media/VerticalHorizontalDrawings-4.png": "/portfolio/static/media/VerticalHorizontalDrawings-4.7aace38cd6ba2f789cec.png",
     "static/media/newspaper-new.png": "/portfolio/static/media/newspaper-new.d8237440c1164163c956.png",
     "static/media/civic.png": "/portfolio/static/media/civic.7303910ac3b7dd09b81b.png",
     "static/media/lift.png": "/portfolio/static/media/lift.5e107248e2ce56a532de.png",
@@ -62,11 +80,11 @@
     "static/media/logo.svg": "/portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/portfolio/index.html",
     "main.ff396af1.css.map": "/portfolio/static/css/main.ff396af1.css.map",
-    "main.3c9752fc.js.map": "/portfolio/static/js/main.3c9752fc.js.map",
+    "main.dd7fc1bc.js.map": "/portfolio/static/js/main.dd7fc1bc.js.map",
     "787.128fc6e9.chunk.js.map": "/portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff396af1.css",
-    "static/js/main.3c9752fc.js"
+    "static/js/main.dd7fc1bc.js"
   ]
 }
