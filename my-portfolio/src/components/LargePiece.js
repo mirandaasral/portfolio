@@ -7,7 +7,15 @@ function LargePiece({ selectedPiece, ...props }) {
     <div className="web-view" style={{ display: "block" }}>
       <div className="piece-view-main">
         {selectedPiece.fullImg.map((slide, i) => {
-          return <img src={slide} className="slide-image" alt="" key={i} />;
+          return (
+            <img
+              src={slide}
+              className="slide-image"
+              style={selectedPiece?.isBig ? {} : { maxHeight: "100%" }}
+              alt=""
+              key={i}
+            />
+          );
         })}
       </div>
     </div>

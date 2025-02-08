@@ -29,8 +29,12 @@ import infographic_preview from "./images/Infographic/infographic_preview.jpg";
 import infographic from "./images/Infographic/infographic.jpg";
 import package_design_preview from "./images/PackagingDesign/package_design_preview.jpg";
 import play_full from "./images/PackagingDesign/play_full.jpg";
+import nuray1 from "./images/PackagingDesign/nuray_apricot_front_mockup.png";
+import nuray2 from "./images/PackagingDesign/nuray_apricot_bottom_mockup.png";
+import nuray3 from "./images/PackagingDesign/nuray_apricot_mockup.png";
 import editorial_spread_2_preview from "./images/ZahaHadid/editorial_spread_2_preview.jpg";
 import editorial_spread_2 from "./images/ZahaHadid/editorial_spread_2.jpg";
+import zaha_render from "./images/ZahaHadid/zaha_hadid_mockup.png";
 import Hierarchy_Text from "./images/Hierarchy/Hierarchy_Text.jpg";
 import Hierarchy_Text_2 from "./images/Hierarchy/Hierarchy_Text.jpg";
 import letter_as_form_demo_copy from "./images/Letters/letter_as_form_demo_copy.jpg";
@@ -39,9 +43,30 @@ import miranda_asral_symbol_set1024_2 from "./images/Symbols/miranda_asral_symbo
 import miranda_asral_symbol_set1024_2_2 from "./images/Symbols/miranda_asral_symbol_set1024_2.jpg";
 import voter_registration from "./images/VoterRegistration/voter-registration.png";
 import voter_registration_2 from "./images/VoterRegistration/voter-registration.png";
-
+import bethlehem from "./images/VoterRegistration/bethlehem.png";
+import civic from "./images/VoterRegistration/civic.png";
+import fml from "./images/VoterRegistration/fml.png";
+import Lehigh_Car from "./images/VoterRegistration/Lehigh_Car.png";
+import Lehigh_Dance from "./images/VoterRegistration/Lehigh_Dance.png";
+import lehigh_friends from "./images/VoterRegistration/lehigh-friends.png";
+import lift from "./images/VoterRegistration/lift.png";
+import newspaper_new from "./images/VoterRegistration/newspaper-new.png";
+import polling_location from "./images/VoterRegistration/polling-locations.png";
+import s1F1 from "./images/Studio1Final/FINAL BOARD FOR PRINT COMPLETE FINAL-1.png";
+import s1F2 from "./images/Studio1Final/FINAL BOARD FOR PRINT COMPLETE FINAL-2.png";
+import s1F3 from "./images/Studio1Final/FINAL BOARD FOR PRINT COMPLETE FINAL-3.png";
+import s1F4 from "./images/Studio1Final/FINAL BOARD FOR PRINT COMPLETE FINAL-4.png";
+import s1Fcrop from "./images/Studio1Final/crop_final.png";
 
 export const pieces = [
+  {
+    name: "Studio 1 Final",
+    description: "",
+    listImg: s1Fcrop,
+    fullImg: [s1F1, s1F2, s1F3, s1F4],
+    isDocument: true,
+    isBig: true,
+  },
   {
     name: "Bethlehem Branding",
     description: "",
@@ -69,55 +94,75 @@ export const pieces = [
       asral_miranda_brand_guidelines_final_20,
       asral_miranda_brand_guidelines_final_21,
       asral_miranda_brand_guidelines_final_22,
-      asral_miranda_brand_guidelines_final_23
-],
+      asral_miranda_brand_guidelines_final_23,
+    ],
+    isDocument: true,
   },
   {
     name: "Editorial Spread",
-    description: "Editorial spread inspired by artist Bozidar Brazda. This piece was part of a class-designed mockup of the 2008 Whitney Biennial. My spread was combined with the work of about 15 other students to make up the content of the magazine.",
+    description:
+      "Editorial spread inspired by artist Bozidar Brazda. This piece was part of a class-designed mockup of the 2008 Whitney Biennial. My spread was combined with the work of about 15 other students to make up the content of the magazine.",
     listImg: brazda_crop,
     fullImg: brazda_full,
   },
   {
     name: "Infographic",
-    description: "Infographic inspired by the question, 'What is truth?' Maps out the history of disinformation and mistrust of the media in the US.",
+    description:
+      "Infographic inspired by the question, 'What is truth?' Maps out the history of disinformation and mistrust of the media in the US.",
     listImg: infographic_preview,
     fullImg: infographic,
   },
   {
     name: "Package Design",
-    description: "Two tea packaging design directions inspired by the Turkish evil eye. ",
+    description:
+      "Two tea packaging design directions inspired by the Turkish evil eye. ",
     listImg: package_design_preview,
-    fullImg: play_full,
+    fullImg: [nuray3, nuray1, play_full],
   },
   {
     name: "Editorial Spread",
-    description: "Editorial spread inspired by architect and artist Zaha Hadid.",
+    description:
+      "Editorial spread inspired by architect and artist Zaha Hadid.",
     listImg: editorial_spread_2_preview,
-    fullImg: editorial_spread_2,
+    fullImg: [zaha_render, editorial_spread_2],
   },
-  {
-    name: "Hierarchy Exercise",
-    description: "Design exercise exploring hierarchy, using letters and text as form.",
-    listImg: Hierarchy_Text,
-    fullImg: Hierarchy_Text_2,
-  },
+  // {
+  //   name: "Hierarchy Exercise",
+  //   description:
+  //     "Design exercise exploring hierarchy, using letters and text as form.",
+  //   listImg: Hierarchy_Text,
+  //   fullImg: Hierarchy_Text_2,
+  // },
   {
     name: "Letter as Form",
-    description: "Design exercise exploring letter as form using multiple typefaces.",
+    description:
+      "Design exercise exploring letter as form using multiple typefaces.",
     listImg: letter_as_form_demo_copy,
     fullImg: letter_as_form_demo_copy_2,
   },
   {
     name: "Symbol Set",
-    description: "An ominous piece inspired by the novel Gone Girl by Gillian Flynn representing an unstable marriage riddled with manipulation, lies, deceit, and the weaponization of the couple's best skill: writing. This collection pictures a weading band, a weaponized pen, a burner phone, and a flipped over chair.",
+    description:
+      "An ominous piece inspired by the novel Gone Girl by Gillian Flynn representing an unstable marriage riddled with manipulation, lies, deceit, and the weaponization of the couple's best skill: writing. This collection pictures a weading band, a weaponized pen, a burner phone, and a flipped over chair.",
     listImg: miranda_asral_symbol_set1024_2,
     fullImg: miranda_asral_symbol_set1024_2_2,
   },
   {
     name: "Lehigh Votes",
-    description: "Social media efforts to help promote the Civic Engagment Day events at Lehigh University.\nhttps://go.lehigh.edu/vote\nhttps://instagram.com/lehighvotes",
+    description:
+      "Social media efforts to help promote the Civic Engagment Day events at Lehigh University.\n\nhttps://instagram.com/lehighvotes",
     listImg: voter_registration,
-    fullImg: voter_registration_2,
+    fullImg: [
+      voter_registration_2,
+      bethlehem,
+      civic,
+      fml,
+      Lehigh_Car,
+      Lehigh_Dance,
+      lehigh_friends,
+      lift,
+      newspaper_new,
+      polling_location,
+    ],
   },
 ];
