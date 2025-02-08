@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="App">
       <div className="name-header">
-        <Link to={{ pathname: `/` }}>
+        <Link to={{ pathname: `/portfolio` }}>
           <h1 className="m-0">MIRANDA ASRAL</h1>
         </Link>
         <div className="right-items">
@@ -55,7 +55,7 @@ function App() {
               setPageView("resume");
             }}
           >
-            <Link to={{ pathname: `/project/resume` }}>Resume</Link>
+            <Link to={{ pathname: `/portfolio/project/resume` }}>Resume</Link>
           </p>
           {/* <p onClick={() => {setPageView('about')}}>About</p> */}
         </div>
@@ -84,7 +84,7 @@ function App() {
                   <div className={`list-item`} key={"div_" + i}>
                     {/* col-6 makes the div the size of half of the width of the row */}
                     {/* m-0 removes all the default margins of the col-6 (m-0 means no margins anywhere) */}
-                    <Link to={{ pathname: `/project/${i}` }}>
+                    <Link to={{ pathname: `/portfolio/project/${i}` }}>
                       <img
                         src={piece.listImg}
                         alt=""

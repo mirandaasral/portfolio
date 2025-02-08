@@ -9,7 +9,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route key="proj-r" path="/project/:id" element={<App key="proj" />} />
+      <Route
+        key="proj-r"
+        path="/portfolio/project/:id"
+        element={<App key="proj" />}
+      />
       <Route key="main-r" path="*" element={<App key="main" />} />
     </Routes>
   </BrowserRouter>
